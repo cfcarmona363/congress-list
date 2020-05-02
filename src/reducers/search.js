@@ -1,6 +1,7 @@
 const initialState = {
   search: '',
-  searchParam: 'first_name'
+  searchParam: 'first_name',
+  searchResults: []
 }
 
 const search = (state = initialState, action) => {
@@ -14,6 +15,11 @@ const search = (state = initialState, action) => {
       return {
         ...state,
         searchParam: action.payload
+      }
+    case 'SET_SEARCH_RESULTS':
+      return {
+        ...state,
+        searchResults: action.payload
       }
 
     default:

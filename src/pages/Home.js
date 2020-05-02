@@ -2,14 +2,14 @@
 import React from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import MainContent from './MainContent'
+import MainContent from '../components/MainContent'
 
 const Home = ({ history }) => {
   return (
     <div className="general-container">
-      <Header />
+      <Header title={'Congress people'} showSearch />
       <MainContent history={history} />
-      <Footer />
+      <Footer title={'Congress people'} />
     </div>
   )
 }

@@ -1,4 +1,22 @@
 .main-content {
   min-height: 80vh;
   padding: 10px;
+
+  .paginator {
+    background-color: $green;
+    border-radius: 30px;
+    padding: 9px;
+  }
+
+  .options-select {
+    background-color: $green;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 30px;
+  }
+
+  .loader-container {
+    min-height: 300px;
+    margin: 50px;
+  }
 }

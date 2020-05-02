@@ -4,8 +4,8 @@ const requestOptions = {
   redirect: 'follow'
 }
 
-const congressService = async () => {
-  const url = 'https://api.propublica.org/congress/v1/116/senate/members.json'
+const congressService = async ({ chamber, congress }) => {
+  const url = `https://api.propublica.org/congress/v1/${congress}/${chamber}/members.json`
   return await axios.get(url, requestOptions)
 }
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 
-const Footer = () => {
+const Footer = ({ title }) => {
   return (
     <Grid container className="footer">
-      <span>Congress people</span>
+      <span>{title}</span>
     </Grid>
   )
 }

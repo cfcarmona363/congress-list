@@ -17,3 +17,11 @@ body {
   }
   position: relative;
 }
+
+.empty {
+  margin: 20px;
+  img {
+    min-height: 40vh;
+    max-width: 80vw;
+  }
+}

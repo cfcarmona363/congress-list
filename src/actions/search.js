@@ -8,4 +8,9 @@ const setSearchParam = value => ({
   payload: value
 })
 
-export default { search, setSearchParam }
+const setSearchResults = value => ({
+  type: 'SET_SEARCH_RESULTS',
+  payload: value
+})
+
+export default { search, setSearchParam, setSearchResults }

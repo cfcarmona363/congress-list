@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
-import Home from './containers/Home'
-import DetailPage from './containers/DetailPage'
+import Home from './pages/Home'
+import DetailPage from './pages/DetailPage'
 
 const Router = () => {
   return (

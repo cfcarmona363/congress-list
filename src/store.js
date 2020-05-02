@@ -1,25 +1,21 @@
-import { combineReducers, createStore, applyMiddleware } from "redux";
-import { save, load } from "redux-localstorage-simple";
-import { createLogger } from "redux-logger";
-import reducers from "../src/reducers";
+import { combineReducers, createStore, applyMiddleware } from 'redux'
+import { save, load } from 'redux-localstorage-simple'
+import { createLogger } from 'redux-logger'
+import reducers from '../src/reducers'
 
-const reducersCombined = combineReducers(reducers);
+const reducersCombined = combineReducers(reducers)
 
 const options = {
-  namespace: "store",
-  states: []
-};
+  namespace: 'store',
+  states: ['Responses', 'Search']
+}
 
-const skipLoggerActions = []; //THIS ACTIONS WILL NOT BE LOGGED
+const skipLoggerActions = [] //THIS ACTIONS WILL NOT BE LOGGED
 const mylogger = createLogger({
   predicate: (getState, action) => skipLoggerActions.indexOf(action.type) === -1
-});
+})
 
-const store = createStore(
-  reducersCombined,
-  load(options),
-  applyMiddleware(mylogger, save(options))
-);
+const store = createStore(reducersCombined, load(options), applyMiddleware(mylogger, save(options)))
 
-window.store = store;
-export default store;
+window.store = store
+export default store
