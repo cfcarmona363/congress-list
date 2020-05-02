@@ -1,0 +1,19 @@
+@import './variables';
+
+@import './loader.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './mainContent.scss';
+@import './personCard.scss';
+
+body {
+  background-color: $background;
+}
+
+.general-container {
+  margin-top: 100px;
+  @media screen and (max-width: $mobile-width) {
+    margin-top: 130px;
+  }
+  position: relative;
+}
