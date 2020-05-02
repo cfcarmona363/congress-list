@@ -48,9 +48,9 @@ const DetailPage = ({ match }) => {
                 <IoMdArrowRoundBack size={'40px'} color={'black'} />
               </Link>
             </Grid>
-            <Grid item lg={12} xs={12} className="name">{`${first_name}${
-              middle_name ? ' ' + middle_name : ''
-            } ${last_name}`}</Grid>
+            <Grid item lg={12} xs={12} className="name">
+              <span>{`${first_name}${middle_name ? ' ' + middle_name : ''} ${last_name}`}</span>
+            </Grid>
             <Grid item lg={2} xs={5} className="info">
               <span>Gender: </span>
               {` ${gender === 'F' ? 'Female' : 'Male'}`}
